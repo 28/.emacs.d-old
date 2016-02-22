@@ -1,0 +1,55 @@
+Emacs commands
+
+General:
+
+Terminate command: C-g
+Create new buffer/Switch between buffers: C-x b
+Kill buffer: C-x k
+Open file: C-x C-f
+Save file: C-x C-s
+Run command: M-x
+Switch between windows: C-x o
+Delete all windows except the current one (not losing data): C-x 1
+Split frame above and bellow: C-x 2
+Split frame side by side: C-x 3
+Delete current window: C-x 0
+Exit emacs: C-x C-c
+
+Text editing:
+
+Kill line: C-k
+Undo: C-/
+Move to beginning of line: C-a
+Move to end of line: C-e
+Move forward one charachter: C-f
+Move backward one charachter: C-b
+Move forward one word: M-f
+Move backward one word: M-b
+Regex search: C-s
+Regex search in reverse: C-r
+Go to line: M-g g
+
+Region handling:
+
+Mark start of the region: C-spc
+Kill region: C-w
+Copy region to kill ring:: M-w
+Yank: C-y
+Cycle though kill ring after yanking: M-y
+Kill word: M-d
+Kill line: C-k
+
+Clojure:
+Start REPL: M-x cider-jack-in
+Eval last command: C-x C-e
+Eval and print: C-u C-x C-e
+Load file in REPL: C-c M-n
+Compile file to REPL: C-c C-k
+Close paranthesis: C-enter
+Open doc: C-c C-d C-d
+Open src: M-.
+Return to buffer: M-,
+Search text across code: C-c C-d C-a
+Paredit:
+Go to open paran: C-M-f
+Go to closing paran: C-M-b
