@@ -1,6 +1,7 @@
 ## My Emacs Configuration
 
 Version: 0.1
+Emacs version: 24.5.1
 
 This is a repository for my Emacs configuration for Clojure/ClojureScript development
 on Windows 10 and Linux.
