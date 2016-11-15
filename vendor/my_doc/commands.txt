@@ -38,6 +38,7 @@ Yank: C-y
 Cycle though kill ring after yanking: M-y
 Kill word: M-d
 Kill line: C-k
+Select whole region: C-x h
 
 Clojure:
 Start REPL: M-x cider-jack-in
@@ -50,6 +51,8 @@ Open doc: C-c C-d C-d
 Open src: M-.
 Return to buffer: M-,
 Search text across code: C-c C-d C-a
+Reident selected region: C-M-\
+
 Paredit:
 Go to open paran: C-M-f
 Go to closing paran: C-M-b
