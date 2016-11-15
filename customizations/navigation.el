@@ -2,7 +2,7 @@
 ;; switch buffers, and choose options from the minibuffer.
 
 
-;; "When several buffers visit identically-named files,
+;; When several buffers visit identically-named files,
 ;; Emacs must give the buffers distinct names. The usual method
 ;; for making buffer names unique adds ‘<2>’, ‘<3>’, etc. to the end
 ;; of the buffer names (all but one of them).

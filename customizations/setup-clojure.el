@@ -1,3 +1,6 @@
+;; Clojure settings file
+
+
 ;;;;
 ;; Clojure
 ;;;;
@@ -12,7 +15,7 @@
 ;; A little more syntax highlighting
 (require 'clojure-mode-extra-font-locking)
 
-;; syntax hilighting for midje
+;; Syntax highlighting for midje
 (add-hook 'clojure-mode-hook
           (lambda ()
             (setq inferior-lisp-program "lein repl")
@@ -29,23 +32,23 @@
 ;; Cider
 ;;;;
 
-;; provides minibuffer documentation for the code you're typing into the repl
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+;; Provides minibuffer documentation for the code you're typing into the repl
+(add-hook 'cider-mode-hook 'eldoc-mode)
 
-;; go right to the REPL buffer when it's finished connecting
+;; Go right to the REPL buffer when it's finished connecting
 (setq cider-repl-pop-to-buffer-on-connect t)
 
 ;; When there's a cider error, show its buffer and switch to it
 (setq cider-show-error-buffer t)
 (setq cider-auto-select-error-buffer t)
 
-;; Where to store the cider history.
+;; Where to store the cider history
 (setq cider-repl-history-file "~/.emacs.d/cider-history")
 
-;; Wrap when navigating history.
+;; Wrap when navigating history
 (setq cider-repl-wrap-history t)
 
-;; enable paredit in your REPL
+;; Enable paredit in your REPL
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 
 ;; Use clojure mode for other extensions
@@ -54,9 +57,7 @@
 (add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
 
-
-;; key bindings
-;; these help me out with the way I usually develop web apps
+;; Key bindings
 (defun cider-start-http-server ()
   (interactive)
   (cider-load-current-buffer)
@@ -64,7 +65,6 @@
     (cider-repl-set-ns ns)
     (cider-interactive-eval (format "(println '(def server (%s/start))) (println 'server)" ns))
     (cider-interactive-eval (format "(def server (%s/start)) (println server)" ns))))
-
 
 (defun cider-refresh ()
   (interactive)

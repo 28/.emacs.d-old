@@ -4,13 +4,14 @@
 ;; a matter of preference and may require some fiddling to match your
 ;; preferences
 
+
 ;; Turn off the menu bar at the top of each frame because it's distracting
 (menu-bar-mode -1)
 
 ;; Show line numbers
 (global-linum-mode)
 
-;; You can comment this to remove add the graphical toolbar at the top. (After
+;; You can comment this to remove/add the graphical toolbar at the top. (After
 ;; awhile, you won't need the toolbar.)
 (when (fboundp 'tool-bar-mode)
    (tool-bar-mode -1))
@@ -28,7 +29,7 @@
 (add-to-list 'load-path "~/.emacs.d/themes")
 (load-theme 'seti t)
 
-;; increase font size for better readability
+;; Increase font size for better readability
 (set-face-attribute 'default nil :height 140)
 
 ;; Uncomment the lines below by removing semicolons and play with the
@@ -56,14 +57,14 @@
       ;; Mouse yank commands yank at point instead of at click.
       mouse-yank-at-point t)
 
-;; No cursor blinking, it's distracting
-(blink-cursor-mode 0)
+;; No cursor blinking
+;; (blink-cursor-mode 0)
 
-;; full path in title bar
+;; Full path in title bar
 (setq-default frame-title-format "%b (%f)")
 
-;; don't pop up font menu
+;; Don't pop up font menu
 (global-set-key (kbd "s-t") '(lambda () (interactive)))
 
-;; no bell
+;; No bell
 (setq ring-bell-function 'ignore)

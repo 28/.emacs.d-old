@@ -1,3 +1,6 @@
+;; Initialization file used to load all packages and customization files.
+
+
 ;;;;
 ;; Packages
 ;;;;
@@ -32,23 +35,23 @@
 ;; Add in your own as you wish:
 (defvar my-packages
   '(;; makes handling lisp expressions much, much easier
-    ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
+    ;; Cheat sheet: http://www.emacswiki.org/emacs/PareditCheatsheet
     paredit
 
-    ;; key bindings and code colorization for Clojure
+    ;; Key bindings and code colorization for Clojure
     ;; https://github.com/clojure-emacs/clojure-mode
     clojure-mode
 
-    ;; extra syntax highlighting for clojure
+    ;; Extra syntax highlighting for clojure
     clojure-mode-extra-font-locking
 
-    ;; integration with a Clojure REPL
+    ;; Integration with a Clojure REPL
     ;; https://github.com/clojure-emacs/cider
     cider
 
-    ;; allow ido usage in as many contexts as possible. see
+    ;; Allow ido usage in as many contexts as possible. See
     ;; customizations/navigation.el line 23 for a description
-    ;; of ido
+    ;; of ido.
     ido-ubiquitous
 
     ;; Enhances M-x to allow easier execution of commands. Provides
@@ -56,17 +59,20 @@
     ;; http://www.emacswiki.org/emacs/Smex
     smex
 
-    ;; project navigation
+    ;; Project navigation
     projectile
 
-    ;; colorful parenthesis matching
+    ;; Colorful parenthesis matching
     rainbow-delimiters
 
-    ;; edit html tags like sexps
+    ;; Edit html tags like sexps
     tagedit
 
-    ;; git integration
-    magit))
+    ;; Git integration
+    magit
+
+    ;; Mode for editing HTML, CSS and XML
+    web-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -74,16 +80,15 @@
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
 ;; to load them.
-;;
-;; For example, if you download yaml-mode.el to ~/.emacs.d/vendor,
-;; then you can add the following code to this file:
-;;
-;; (require 'yaml-mode)
-;; (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;; 
-;; Adding this code will make Emacs enter yaml mode whenever you open
-;; a .yml file
-(add-to-list 'load-path "~/.emacs.d/vendor")
+(defvar vendor-dir "~/.emacs.d/vendor")
+(add-to-list 'load-path vendor-dir)
+
+;; Fireplace
+(load "fireplace/fireplace.el")
+
+;; My doc feature
+(setq my-doc-location (concat vendor-dir "/my_doc/commands.txt"))
+(load "my_doc/my_doc.el")
 
 ;;;;
 ;; Customization
@@ -114,14 +119,7 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
-;; Langauage-specific
+;; Language-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
-
-;; Fireplace
-(load "~/.emacs.d/vendor/fireplace/fireplace")
-
-;; My doc feature
-(setq my-doc-location "~/.emacs.d/vendor/my_doc/commands.txt")
-(load "~/.emacs.d/vendor/my_doc/my_doc.el")
-
+(load "setup-html.el")

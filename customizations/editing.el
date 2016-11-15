@@ -1,6 +1,7 @@
 ;; Customizations relating to editing a buffer.
 
-;; Key binding to use "hippie expand" for text autocompletion
+
+;; Key binding to use "hippie expand" for text auto-completion
 ;; http://www.emacswiki.org/emacs/HippieExpand
 (global-set-key (kbd "M-/") 'hippie-expand)
 
@@ -43,18 +44,17 @@
                                                "backups"))))
 (setq auto-save-default nil)
 
-
-;; comments
+;; Comments
 (defun toggle-comment-on-line ()
   "comment or uncomment current line"
   (interactive)
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
-;; yay rainbows!
+;; Rainbow delimiters mode
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-;; use 2 spaces for tabs
+;; Use 2 spaces for tabs
 (defun die-tabs ()
   (interactive)
   (set-variable 'tab-width 2)
