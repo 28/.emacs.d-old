@@ -49,6 +49,9 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
+    ;; Clojure auto-complete functionality
+    ac-cider
+
     ;; Allow ido usage in as many contexts as possible. See
     ;; customizations/navigation.el line 23 for a description
     ;; of ido.
