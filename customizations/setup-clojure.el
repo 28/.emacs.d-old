@@ -62,7 +62,9 @@
 
 (add-hook 'cider-mode-hook 'ac-flyspell-workaround)
 (add-hook 'cider-mode-hook 'ac-cider-setup)
-(add-hook 'coder-repl-mode-hook 'ac-cider-setup)
+(add-hook 'cider-repl-mode-hook 'ac-cider-setup)
+(setq ac-delay 0.0)
+(setq ac-quick-help-delay 0.0)
 (eval-after-load "auto-complete"
   '(progn
      (add-to-list 'ac-modes 'cider-mode)

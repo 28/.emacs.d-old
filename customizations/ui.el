@@ -27,7 +27,7 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'seti t)
+(load-theme 'zenburn t)
 
 ;; Increase font size for better readability
 (set-face-attribute 'default nil :height 140)
