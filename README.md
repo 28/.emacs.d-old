@@ -1,7 +1,5 @@
 ## My Emacs Configuration
 
-Version: 0.1
-
 Emacs version: 24.5.1
 
 This is a repository for my Emacs configuration for Clojure/ClojureScript development
@@ -14,3 +12,5 @@ This is basically a modification of resources (Emacs configuration) provided for
 
 On Windows "HOME" environment variable must be created with the value that represents the location of the user folder or any location in which Emacs should
 create .emacs.d folder.
+
+There is a Power Shell [script](tools/win_set_home_variable.ps1) that sets the "HOME" system environment variable to the current user's folder.
