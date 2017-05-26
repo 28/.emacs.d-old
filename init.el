@@ -75,7 +75,10 @@
     magit
 
     ;; Mode for editing HTML, CSS and XML
-    web-mode))
+    web-mode
+    
+    ;; Displays available keybindings
+    which-key))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
