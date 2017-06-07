@@ -81,7 +81,10 @@
     web-mode
     
     ;; Displays available keybindings
-    which-key))
+    which-key
+
+    ;; Char based decision tree navigation
+    avy))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
