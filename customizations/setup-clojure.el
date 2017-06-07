@@ -106,7 +106,7 @@
   (yas-minor-mode 1)
   (cljr-add-keybindings-with-prefix "C-c C-m"))
 
-(add-hook 'clojure-mode-hook 'clj-ref-hool)
+(add-hook 'clojure-mode-hook 'clj-ref-hook)
 
 ;; Key bindings
 (defun cider-start-http-server ()
