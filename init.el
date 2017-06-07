@@ -52,6 +52,9 @@
     ;; Clojure auto-complete functionality
     ac-cider
 
+    ;; Clojure advanced refactoring
+    clj-refactor
+
     ;; Allow ido usage in as many contexts as possible. See
     ;; customizations/navigation.el line 23 for a description
     ;; of ido.
