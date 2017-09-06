@@ -102,6 +102,9 @@
 (setq my-doc-location (concat vendor-dir "/my_doc/commands.txt"))
 (load "my_doc/my_doc.el")
 
+;; Neo tree
+(load "neotree/neotree")
+
 ;;;;
 ;; Customization
 ;;;;

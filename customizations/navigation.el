@@ -57,3 +57,7 @@
 
 ;; projectile everywhere!
 (projectile-global-mode)
+
+;; Neotree config
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
