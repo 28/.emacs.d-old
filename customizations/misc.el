@@ -13,3 +13,7 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+;; Org mode
+(global-set-key (kbd "C-c a") 'org-agenda)
+(setq org-log-done t)
