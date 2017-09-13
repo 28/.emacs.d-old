@@ -58,7 +58,7 @@
 
 ;;ClojureScript
 (setq cider-cljs-lein-repl
-   "(do (require 'figwheel-sidecar.repl-api)
+      "(do (require 'figwheel-sidecar.repl-api)
      (figwheel-sidecar.repl-api/start-figwheel!)
      (figwheel-sidecar.repl-api/cljs-repl))")
 
@@ -114,26 +114,12 @@
 (add-hook 'clojure-mode-hook 'clj-ref-hook)
 
 ;; Key bindings
-(defun cider-start-http-server ()
-  (interactive)
-  (cider-load-current-buffer)
-  (let ((ns (cider-current-ns)))
-    (cider-repl-set-ns ns)
-    (cider-interactive-eval (format "(println '(def server (%s/start))) (println 'server)" ns))
-    (cider-interactive-eval (format "(def server (%s/start)) (println server)" ns))))
-
-(defun cider-refresh ()
-  (interactive)
-  (cider-interactive-eval (format "(user/reset)")))
-
 (defun cider-user-ns ()
   (interactive)
   (cider-repl-set-ns "user"))
 
 (eval-after-load 'cider
   '(progn
-     (define-key clojure-mode-map (kbd "C-c C-v") 'cider-start-http-server)
-     (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key clojure-mode-map (kbd "C-M-]") 'whitespace-cleanup)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))

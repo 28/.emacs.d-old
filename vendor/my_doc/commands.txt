@@ -58,7 +58,8 @@ Open src: M-.
 Return to buffer: M-,
 Search text across code: C-c C-d C-a
 Reident selected region: C-M-\
-Whitespace cleanup: C-c u
+Whitespace cleanup: C-M ]
+Switch to user ns: C-c u
 
 ### Paredit ###
 
