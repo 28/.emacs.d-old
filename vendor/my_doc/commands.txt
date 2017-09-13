@@ -1,9 +1,11 @@
 Emacs commands
 
-General:
+### General ###
 
+Open this document: C-c m
 Terminate command: C-g
 Create new buffer/Switch between buffers: C-x b
+Show list of buffers: C-x C-b
 Kill buffer: C-x k
 Open file: C-x C-f
 Save file: C-x C-s
@@ -15,7 +17,7 @@ Split frame side by side: C-x 3
 Delete current window: C-x 0
 Exit emacs: C-x C-c
 
-Text editing:
+### Text editing ###
 
 Kill line: C-k
 Undo: C-/
@@ -27,11 +29,13 @@ Move forward one word: M-f
 Move backward one word: M-b
 Regex search: C-s
 Regex search in reverse: C-r
+Search: C-M-s
+Search in reverse: C-M-r
 Go to line: M-g g
 
-Region handling:
+### Region handling ###
 
-Mark start of the region: C-spc
+Mark start of the region: C-SPC
 Kill region: C-w
 Copy region to kill ring:: M-w
 Yank: C-y
@@ -40,19 +44,43 @@ Kill word: M-d
 Kill line: C-k
 Select whole region: C-x h
 
-Clojure:
-Start REPL: M-x cider-jack-in
+### Clojure/Cider ###
+
+Start Clojure REPL: C-c M-j
+Start ClojureScript REPL: C-c M-J
 Eval last command: C-x C-e
 Eval and print: C-u C-x C-e
 Load file in REPL: C-c M-n
 Compile file to REPL: C-c C-k
-Close paranthesis: C-enter
+Close paranthesis: C-RET
 Open doc: C-c C-d C-d
 Open src: M-.
 Return to buffer: M-,
 Search text across code: C-c C-d C-a
 Reident selected region: C-M-\
+Whitespace cleanup: C-c u
 
-Paredit:
+### Paredit ###
+
 Go to open paran: C-M-f
 Go to closing paran: C-M-b
+
+### Avy ###
+
+Go to one char: C-:
+Go to two chars: C-|
+Go to line: M-g f
+Go to word starting with char: M-g w
+Go to all words: M-g e
+
+### Org ###
+
+Open agenda: C-c a
+Mark task as done: C-c C-t
+Insert heading: C-SHIFT-RET
+Collapse/expand headings: SHIFT-TAB
+Schedule task: C-c C-s
+
+### Neotree ###
+
+Show tree: F8
