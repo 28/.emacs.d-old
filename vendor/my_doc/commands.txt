@@ -63,12 +63,12 @@ Switch to user ns: C-c u
 
 ### Paredit ###
 
-Go to open paran: C-M-f
-Go to closing paran: C-M-b
+Go to open paran: C-M-b
+Go to closing paran: C-M-f
 
 ### Avy ###
 
-Go to one char: C-:
+Go to one char: C-=
 Go to two chars: C-|
 Go to line: M-g f
 Go to word starting with char: M-g w
