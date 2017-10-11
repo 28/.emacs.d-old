@@ -83,7 +83,13 @@
     which-key
 
     ;; Char based decision tree navigation
-    avy))
+    avy
+
+    ;; Lua mode
+    lua-mode
+
+    ;; For luarocks integration
+    luarocks))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
