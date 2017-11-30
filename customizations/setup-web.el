@@ -1,4 +1,4 @@
-;; Setting for web-mode. Used only for HTML, CSS and XML.
+;; Setting for web related stuff - for HTML, CSS, XML, Markdown etc.
 
 
 ;; Associate file types for web-mode

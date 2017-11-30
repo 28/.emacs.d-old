@@ -145,7 +145,7 @@
 ;; Language-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
-(load "setup-html.el")
+(load "setup-web.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
