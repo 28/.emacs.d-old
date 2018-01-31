@@ -29,3 +29,5 @@
 (global-set-key (kbd "C-x M-e") "∃") ; there exists
 (global-set-key (kbd "C-x M-n") "¬") ; negation
 (global-set-key (kbd "C-x M-s") "∅") ; empty set
+(global-set-key (kbd "C-x M-u") "∪") ; union
+(global-set-key (kbd "C-x M-i") "∩") ; intersection
