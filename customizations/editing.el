@@ -67,3 +67,6 @@
   (keyboard-quit))
 
 (setq electric-indent-mode nil)
+
+;; Enable ruler for text editing
+(add-hook 'text-mode-hook (lambda () (ruler-mode 1)))
