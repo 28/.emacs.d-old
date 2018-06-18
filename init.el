@@ -92,7 +92,10 @@
     luarocks
 
 	;; Markdown mode
-	markdown-mode))
+	markdown-mode
+
+	;; Graphviz mode
+	graphviz-dot-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
