@@ -91,11 +91,11 @@
     ;; For luarocks integration
     luarocks
 
-	;; Markdown mode
-	markdown-mode
+    ;; Markdown mode
+    markdown-mode
 
-	;; Graphviz mode
-	graphviz-dot-mode))
+    ;; Graphviz mode
+    graphviz-dot-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
