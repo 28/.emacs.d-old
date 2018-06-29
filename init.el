@@ -33,7 +33,7 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(;; makes handling lisp expressions much, much easier
+  '(;; Makes handling lisp expressions much, much easier
     ;; Cheat sheet: http://www.emacswiki.org/emacs/PareditCheatsheet
     paredit
 
@@ -49,14 +49,17 @@
     cider
 
     ;; Clojure auto-complete functionality
+    ;; https://github.com/clojure-emacs/ac-cider
     ac-cider
 
     ;; Clojure advanced refactoring
+    ;; https://github.com/clojure-emacs/clj-refactor.el
     clj-refactor
 
     ;; Allow ido usage in as many contexts as possible. See
     ;; customizations/navigation.el line 23 for a description
     ;; of ido.
+    ;; https://github.com/DarwinAwardWinner/ido-completing-read-plus
     ido-completing-read+
 
     ;; Enhances M-x to allow easier execution of commands. Provides
@@ -65,37 +68,52 @@
     smex
 
     ;; Project navigation
+    ;; https://github.com/bbatsov/projectile
     projectile
 
     ;; Colorful parenthesis matching
+    ;; https://github.com/Fanael/rainbow-delimiters
     rainbow-delimiters
 
     ;; Edit html tags like sexps
+    ;; https://github.com/magnars/tagedit
     tagedit
 
     ;; Git integration
+    ;; https://magit.vc
     magit
 
     ;; Mode for editing HTML, CSS and XML
+    ;; http://web-mode.org
     web-mode
     
     ;; Displays available keybindings
+    ;; https://github.com/justbur/emacs-which-key
     which-key
 
     ;; Char based decision tree navigation
+    ;; https://github.com/abo-abo/avy
     avy
 
     ;; Lua mode
+    ;; https://github.com/immerrr/lua-mode
     lua-mode
 
     ;; For luarocks integration
+    ;; https://github.com/emacs-pe/luarocks.el
     luarocks
 
     ;; Markdown mode
+    ;; https://jblevins.org/projects/markdown-mode/
     markdown-mode
 
     ;; Graphviz mode
-    graphviz-dot-mode))
+    ;; https://github.com/ppareit/graphviz-dot-mode
+    graphviz-dot-mode
+
+    ;; Makes env variables look like in shell
+    ;; https://github.com/purcell/exec-path-from-shell
+    exec-path-from-shell))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -114,7 +132,7 @@
 (load "my_doc/my_doc.el")
 
 ;; Neo tree
-(load "neotree/neotree")
+(load "neotree/neotree.el")
 
 ;;;;
 ;; Customization
@@ -142,13 +160,11 @@
 ;; Hard-to-categorize customizations
 (load "misc.el")
 
-;; For editing lisps
-(load "elisp-editing.el")
-
 ;; Language-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-web.el")
+(load "setup-elisp.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

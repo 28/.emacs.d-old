@@ -58,12 +58,10 @@
 ;; projectile everywhere!
 (projectile-global-mode)
 
-;; Neotree config
-(require 'neotree)
+;; Neotree panel
 (global-set-key [f8] 'neotree-toggle)
 
-;; Enable avy
-(require 'avy)
+;; Setup avy
 (global-set-key (kbd "C-=") 'avy-goto-char)
 (global-set-key (kbd "C-|") 'avy-goto-char-2)
 (global-set-key (kbd "M-g f") 'avy-goto-line)

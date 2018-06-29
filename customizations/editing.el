@@ -54,10 +54,6 @@
 ;; Rainbow delimiters mode
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-;; Enable which-key
-(require 'which-key)
-(which-key-mode)
-
 ;; Use 2 spaces for tabs
 (defun die-tabs ()
   (interactive)

@@ -68,3 +68,6 @@
 
 ;; No bell
 (setq ring-bell-function 'ignore)
+
+;; Enable which-key
+(which-key-mode)

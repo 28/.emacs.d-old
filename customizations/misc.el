@@ -31,3 +31,8 @@
 (global-set-key (kbd "C-x M-s") "∅") ; empty set
 (global-set-key (kbd "C-x M-u") "∪") ; union
 (global-set-key (kbd "C-x M-i") "∩") ; intersection
+
+;; Setup graphviz dot mode
+(add-hook 'graphviz-dot-mode-hook
+    '(lambda ()
+       (local-set-key (kbd "C-c b") 'graphviz-dot-preview)))

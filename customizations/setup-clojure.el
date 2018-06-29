@@ -63,8 +63,6 @@
      (figwheel-sidecar.repl-api/cljs-repl))")
 
 ;; Auto-complete
-(require 'ac-cider)
-
 (defun set-auto-complete-as-completion-at-point-function ()
   (setq completion-at-point-functions '(auto-complete)))
 
@@ -73,8 +71,6 @@
 (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
-;;(setq ac-delay 0.0)
-;;(setq ac-quick-help-delay 0.0)
 (eval-after-load "auto-complete"
   '(progn
      (add-to-list 'ac-modes 'cider-mode)
@@ -104,8 +100,6 @@
                                nil))))))
 
 ;; Refactoring
-(require 'clj-refactor)
-
 (defun clj-ref-hook ()
   (clj-refactor-mode 1)
   (yas-minor-mode 1)
