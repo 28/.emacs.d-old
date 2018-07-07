@@ -2,7 +2,7 @@
 
 Emacs version currently used: 25.3-x86_64
 
-Systems used on: Windows 7, Windows 10, lubuntu
+Systems used on: Windows 7, Windows 10, lubuntu, MacOS
 
 This repository contains my personal Emacs configuration - the whole
 *.emacs.d* folder. It is a modification/extension of the resources
