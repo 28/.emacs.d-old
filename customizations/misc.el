@@ -13,6 +13,7 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+(setq initial-scratch-message "")
 
 ;; Org mode
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -36,3 +37,14 @@
 (add-hook 'graphviz-dot-mode-hook
     '(lambda ()
        (local-set-key (kbd "C-c b") 'graphviz-dot-preview)))
+
+;; UTF-8
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; Undo limit
+(setq undo-limit 9999999)
+
+;; Reload files modified on disk
+(global-auto-revert-mode 1)
