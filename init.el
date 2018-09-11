@@ -12,8 +12,8 @@
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
-						 ("melpa" . "https://melpa.org/packages/")))
-						 ;;("tromey" . "http://tromey.com/elpa/")
+			 ("melpa" . "https://melpa.org/packages/")))
+			 ;;("tromey" . "http://tromey.com/elpa/")
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
