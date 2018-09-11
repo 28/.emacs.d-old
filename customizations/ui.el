@@ -71,3 +71,6 @@
 
 ;; Enable which-key
 (which-key-mode)
+
+;; Enable hideshow
+(add-hook 'prog-mode-hook 'hs-minor-mode)
