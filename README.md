@@ -1,5 +1,7 @@
 ## My *.emacs.d*
 
+**This repository is archived, my new Emacs config is now [here](https://github.com/28/.emacs.d).**
+
 Emacs version currently used: 25.3-x86_64
 
 Systems used on: Windows 7, Windows 10, lubuntu, MacOS
